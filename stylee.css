@@ -1,0 +1,149 @@
+/* Warna berdasarkan gambar: Latar belakang biru tua, Teks putih/terang */
+:root {
+    --bg-color: #f8f6f6; /* Biru Tua */
+    --text-color: #ffffff;
+    --section-bg: #1b0000; /* Latar belakang untuk Proyek */
+    --primary-color: #eef3ef; /* Warna biru muda untuk aksen */
+    --border-color: #3f68b5; /* Biru sedang untuk garis */
+}
+
+/* Gaya Dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    /* Memastikan konten di tengah halaman */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Container Utama */
+.container {
+    background-color: #181818;
+    width: 100%;
+    max-width: 600px; /* Batasi lebar agar fokus di tengah seperti gambar */
+    padding: 30px 40px;
+}
+
+/* Header Profil */
+.profil-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.initials-circle {
+    width: 80px;
+    height: 80px;
+    background-color: transparent; /* Lingkaran transparan */
+    border: 3px solid var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 auto 15px auto;
+}
+
+.profil-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+/* Judul Bagian */
+.section-title {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin: 20px 0 15px 0;
+    font-weight: 500;
+}
+
+/* Daftar Data dan Keahlian */
+.data-list {
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.data-list p {
+    display: flex;
+    margin: 5px 0;
+}
+
+.data-list span:nth-child(1) { /* Kolom Kiri: Nama, Alamat, Keahlian */
+    flex-basis: 35%; /* Sesuaikan agar kolom kedua (titik dua) sejajar */
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.data-list span:nth-child(2) { /* Kolom Tengah: Titik Dua */
+    flex-basis: 5%;
+}
+
+.data-list span:nth-child(3) { /* Kolom Kanan: Nilai data */
+    flex-grow: 1;
+}
+
+.keahlian-list span:nth-child(1) {
+    font-weight: bold;
+    color: var(--primary-color); /* Warna Keahlian di daftar */
+    max-width: 150px;
+}
+
+/* Proyek Card */
+.proyek-card {
+    background-color: #0e0d0d; /* Latar belakang gelap seperti di gambar */
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.proyek-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.proyek-card p {
+    font-size: 0.9em;
+    color: #d3c5c5;
+    margin-bottom: 15px;
+}
+
+.btn-lihat-proyek {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-lihat-proyek:hover {
+    background-color: rgba(155, 4, 4, 0.664); /* Efek hover ringan */
+}
+
+/* Responsiveness Sederhana */
+@media (max-width: 650px) {
+    .container {
+        padding: 20px;
+    }
+
+    .data-list span:nth-child(1) {
+        flex-basis:40%;
+}
+}
